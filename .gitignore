@@ -1,3 +1,6 @@
 *~
 *.o
 *.out
+
+.hdl_checker/
+.vscode/
