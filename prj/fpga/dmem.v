@@ -15,7 +15,7 @@ module dmem
    always @ (posedge clk) begin
       rdata <= mem[addr[10:0]];
       if (we)
-	mem[addr] <= wdata;
+	      mem[addr] <= wdata;
    end
 endmodule // dmem
 `default_nettype wire

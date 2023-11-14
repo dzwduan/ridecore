@@ -10,3 +10,14 @@ Some of the hardware modules in RIDECORE are based on vscale (<https://github.co
 
 ## Learn ooo processor
 rv32IM 架构
+
+## 当前进展
+1.  tag_generator 
+
+## TODO
+1. add runnable env
+1. add ras
+1. 
+
+## 参考内容
+1. https://zhuanlan.zhihu.com/p/490749315

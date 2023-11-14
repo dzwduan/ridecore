@@ -5,11 +5,13 @@ module pipeline_if
    input wire 			  clk,
    input wire 			  reset,
    input wire [`ADDR_LEN-1:0] 	  pc,
+
    output wire 			  predict_cond,
    output wire [`ADDR_LEN-1:0] 	  npc,
    output wire [`INSN_LEN-1:0] 	  inst1,
    output wire [`INSN_LEN-1:0] 	  inst2,
    output wire 			  invalid2,
+
    input wire 			  btbpht_we,
    input wire [`ADDR_LEN-1:0] 	  btbpht_pc,
    input wire [`ADDR_LEN-1:0] 	  btb_jmpdst,
@@ -19,6 +21,7 @@ module pipeline_if
    input wire 			  prmiss,
    input wire 			  prsuccess,
    input wire [`SPECTAG_LEN-1:0]  prtag,
+
    output wire [`GSH_BHR_LEN-1:0] bhr,
    input wire [`SPECTAG_LEN-1:0]  spectagnow,
    input wire [4*`INSN_LEN-1:0]   idata
@@ -93,6 +96,7 @@ module select_logic
    output wire 			invalid
    );
 
+// 只能取 32|10 , 不能 03|21|
    assign invalid = (sel[0] == 1'b1);
    
    always @ (*) begin

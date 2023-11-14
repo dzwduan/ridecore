@@ -22,7 +22,7 @@ module sel_bhrfix(
 	5'b00100 : out = bhr2;
 	5'b01000 : out = bhr3;
 	5'b10000 : out = bhr4;
-	default : out = 0;
+	default  : out = 0;
       endcase // case (sel)
    end
    
@@ -111,8 +111,11 @@ module gshare_predictor
       end
    end
    
+   // rif is read data of pht in fetch stage, if rif > 1 =>  branch taken 
    assign predict_cond = (hit_bht && (rif > 2'b01)) ? 1'b1 : 1'b0;
+   // 
    assign wex_calc = {1'b0, rex} + (wcond ? 3'b001 : 3'b111);
+   // 
    assign wex = ((rex == 2'b00) && ~wcond) ? 2'b00 :
 		((rex == 2'b11) && wcond) ? 2'b11 : wex_calc[1:0];
 
