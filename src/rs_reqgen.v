@@ -4,18 +4,18 @@ module rs_requestgenerator
   (
    input wire [`RS_ENT_SEL-1:0] rsent_1,
    input wire [`RS_ENT_SEL-1:0] rsent_2,
-   output wire 			req1_alu,
-   output wire 			req2_alu,
-   output wire [1:0] 		req_alunum,
-   output wire 			req1_branch,
-   output wire 			req2_branch,
-   output wire [1:0] 		req_branchnum,
-   output wire 			req1_mul,
-   output wire 			req2_mul,
-   output wire [1:0] 		req_mulnum,
-   output wire 			req1_ldst,
-   output wire 			req2_ldst,
-   output wire [1:0] 		req_ldstnum
+   output wire          req1_alu,
+   output wire          req2_alu,
+   output wire [1:0]        req_alunum,
+   output wire          req1_branch,
+   output wire          req2_branch,
+   output wire [1:0]        req_branchnum,
+   output wire          req1_mul,
+   output wire          req2_mul,
+   output wire [1:0]        req_mulnum,
+   output wire          req1_ldst,
+   output wire          req2_ldst,
+   output wire [1:0]        req_ldstnum
    );
 
    assign req1_alu = (rsent_1 == `RS_ENT_ALU) ? 1'b1 : 1'b0;

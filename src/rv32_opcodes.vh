@@ -16,7 +16,7 @@
 `define RV32_BRANCH   7'b1100011
 
 `define RV32_LOAD_FP  7'b0000111
-`define RV32_STORE_FP 7'b0100111 
+`define RV32_STORE_FP 7'b0100111
 `define RV32_MSUB     7'b1000111
 `define RV32_JALR     7'b1100111
 
