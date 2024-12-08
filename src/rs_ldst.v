@@ -132,7 +132,7 @@ module rs_ldst_ent
                .src(nextsrc2),
                .resolved(nextvalid2)
                );
-   
+
 endmodule // rs_ldst
 
 

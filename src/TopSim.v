@@ -2,7 +2,7 @@
 `include "constants.vh"
 `include "pipeline.v"
 `include "dmem.v"
-`include "imem_ld.v"
+`include "imem.v"
 
 module TopSim (
     input clk,
